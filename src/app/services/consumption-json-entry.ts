@@ -21,7 +21,7 @@ export class ConsumptionJsonEntry {
   city: string;
 
   get date(): Date {
-     let us_date = this.date.reverse().join('-');
+     let us_date = this.date.split('.').reverse().join('-');
      let d = new Date(us_date);
      return d;
   }
